@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">
                     <div class="d-flex justify-content-between">
-                        <div>Galeri Foto</div>
+                        <div>GALLERY PHOTO</div>
                         <div>
 
                             <form class="form-inline">
@@ -30,9 +30,9 @@
                     <div class="row">
                         <div class="col-md-3">
                           <div class="list-group">
-                              <a href="#" class="list-group-item list-group-item-action">Pribadi</a>
-                              <a href="#" class="list-group-item list-group-item-action">Teman</a>
-                              <a href="#" class="list-group-item list-group-item-action">Keluarga</a>
+                              <a href="#" class="list-group-item list-group-item-action">Two Piece</a>
+                              <a href="#" class="list-group-item list-group-item-action">Fairy Tape</a>
+                              <a href="#" class="list-group-item list-group-item-action">Jujur Kasian</a>
                           </div>
                         </div>
                         <div class="col-md-9">
@@ -45,16 +45,16 @@
 
                               <form action="/action_page.php" id="image_upload_form">
                                   <div class="form-group">
-                                    <label for="caption">Keterangan Foto</label>
+                                    <label for="caption">Deskripsi Foto</label>
                                     <input type="text" name="caption" class="form-control" placeholder="Masukkan Keterangan" id="caption">
                                   </div>
                                   <div class="form-group">
-                                      <label for="category">Pilih Daftar</label>
+                                      <label for="category">Pilih Daftar Album</label>
                                       <select name="category" class="form-control" id="category">
                                         <option value="">Pilih Kategori</option>
-                                        <option value="pribadi">Pribadi</option>
-                                        <option value="teman">Teman</option>
-                                        <option value="keluarga">Keluarga</option>
+                                        <option value="pribadi">Two Piece</option>
+                                        <option value="teman">Fairy Tape</option>
+                                        <option value="keluarga">Jujur Kasian</option>
                                       </select>
                                     </div>
                                     <div class="form-group">
