@@ -79,6 +79,8 @@
                                           </div>
                                           <input type="file" name="image" class="dropzone">
                                         </div>
+
+                                        <div id="image_error"></div>
                                       </div>
 
                                   <button type="submit" class="btn btn-primary">Kirim</button>
@@ -154,9 +156,9 @@
     },
     errorPlacement:function(error,element){
       if(element.attr('name')=="image"){
-        error.insertAfter(""#image_error);
+        error.insertAfter("#image_error");
       }else{
-        error.insertAfter();
+        error.insertAfter(element);
       }
     }
   }
@@ -168,9 +170,20 @@
     var reader = new FileReader();
 
     reader.onload = function(e) {
-      var htmlPreview =
-        '<img width="200" src="' + e.target.result + '" />' +
+
+      var validImageType=['image/png','image/bmp','image/jpeg','image/jpg'];
+
+      if(!validImageType.includes(input.files[0]['type'])){
+        var htmlPreview =
+        '<p>Image preview not available</p>' +
         '<p>' + input.files[0].name + '</p>';
+      }else{
+        var htmlPreview =
+        '<img width="70%" height="#" src="' + e.target.result + '" />' +
+        '<p>' + input.files[0].name + '</p>';
+      }
+      
+  
       var wrapperZone = $(input).parent();
       var previewZone = $(input).parent().parent().find('.preview-zone');
       var boxZone = $(input).parent().parent().find('.preview-zone').find('.box').find('.box-body');
