@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('like_foto', function (Blueprint $table) {
+        Schema::create('galer_images', function (Blueprint $table) {
             $table->id();
-            $table->integer('tanggal_like');
-            $table->unsignedBigInteger('users_id');
-            $table->foreign('users_id')->references('id')->on('users');
-            $table->unsignedBigInteger('foto_id');
-            $table->foreign('foto_id')->references('id')->on('foto');
+            $table->unsignedInteger('user_id');
+            $table->string('caption');
+            $table->string('category');
+            $table->string('image');
             $table->timestamps();
         });
     }
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('like_foto');
+        Schema::dropIfExists('galer_images');
     }
 };
